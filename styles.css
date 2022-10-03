@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Bainsley;
+    src: url(./fonts/Bainsley_Bold.otf);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url(./img/Fondobackground.png);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.TituloCalculadora{
+    position: absolute;
+    font-family:Bainsley;
+    color: aqua;
+}
+.cuadroInputs{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.cuadroInputs label{
+    position: relative;
+    font-family: Bainsley;
+    font-size: 30px;
+}
