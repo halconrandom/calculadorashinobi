@@ -2,6 +2,10 @@
     font-family: Bainsley;
     src: url(./fonts/Bainsley_Bold.otf);
 }
+@font-face {
+    font-family: Naruto;
+    src: url(./fonts/njnaruto.ttf);
+}
 
 body{
     display: flex;
@@ -11,26 +15,202 @@ body{
     left: 0;
     margin: 0 auto;
 }
+
 .TituloCalculadora{
     position: absolute;
     font-family:Bainsley;
     color: aqua;
 }
 .cuadroInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: absolute;
     right: 0;
     left: 0;
     margin: 0 auto;
     top: 250px;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 600px;
     height: 500px;
     border-radius: 20px;
 }
 
-.cuadroInputs label{
-    position: relative;
-    font-family: Bainsley;
-    font-size: 30px;
+/*  */
+/*  */
+/*  */
+/* !PRIMERA PANTALLA */
+
+
+.tituloCalcular{
+    font-family: Naruto;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
 }
+.buttonGolpes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    width: 200px;
+    font-family: Bainsley;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    background-color: rgb(136, 136, 136);
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.buttonGolpes:hover{
+    transition: all .4s ease;
+    background-color: rgb(100, 100, 100) ;
+}
+
+.buttonChakra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+    width: 200px;
+    font-family: Bainsley;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    background-color: rgb(136, 136, 136);
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.buttonChakra:hover{
+    transition: all .4s ease;
+    background-color: rgb(100, 100, 100) ;
+}
+
+.buttonShurikenjutsu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 90px;
+    width: 200px;
+    font-family: Bainsley;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    background-color: rgb(136, 136, 136);
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.buttonShurikenjutsu:hover{
+    transition: all .4s ease;
+    background-color: rgb(100, 100, 100) ;
+}
+
+.cuadroInputs div{
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+.labelsInputFuerza{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.labelsInputTecnica{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.descripcionGeneral{
+    font-family: Bainsley;
+    text-align: center;
+    font-size: 13px;
+}
+
+.label1, .label2{
+    font-size: 20px;
+    font-family: Bainsley;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+}
+
+.input1, .label1{
+    position: relative;
+    top: 50px;
+}
+.label2, .input2{
+    position: relative;
+    top: 70px;
+}
+.submitGeneral{
+    position: relative;
+    top: 90px;
+}
+
+.resultadoGeneral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    font-family: Bainsley;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    text-shadow: white -2px 0px, white 0px 2px, white 2px 0px, white 0px -2px;
+}
+
+
+.buttonVolver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 90px;
+    height: 10px;
+    height: 5px;
+    width: 30px;
+    font-family: Bainsley;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    background-color: rgb(136, 136, 136);
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+}
+.buttonVolver:hover{
+    transition: all .4s ease;
+    background-color: rgb(100, 100, 100) ;
+}
+

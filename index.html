@@ -5,20 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Calculadora 1.0</title>
+    <title>Calculadora 1.2</title>
 </head>
 <body>
-    <h1 class="TituloCalculadora">Calculadora de Daño Shinobi 1.0</h1>
+    <h1 class="TituloCalculadora">Calculadora de Daño Shinobi 1.2</h1>
+    <div class="cuadroInputs" id="cuadroInputs">
+        <h2 class="tituloCalcular" id="titulo">Elije el tipo de calculo que deseas realizar</h2>
+        <div class="buttonGolpes" id="golpes" href="">
+            Golpes (Taijutsu)
+        </div>
+        <div class="buttonChakra" id="chakra" href="">
+            Técnicas (Ninjutsu, etc)
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
+
+        <div class="labelsInputFuerza labelsGeneral" id="labelsInputFuerza">
+            <h3 class="descripcionFuerza descripcionGeneral">Los golpes y/o patadas dados con fuerza son multiplicados x2. El calculo se realiza restando la fuerza del golpe a la fuerza tuya, posteriormente añadiendo la multiplicacion para definir cuanto daño te realizo.</h3>
+            <label class="labelFuerza label1" for="inputFuerza">Coloque la fuerza del ataque recibido</label>
+            <input class="inputFuerza input1" type="text" id="inputFuerza">
+            <label class="labelRecepter label2" for="inputReceptor">Coloca tu fuerza</label>
+            <input class="inputRecepter input2" type="text" id="inputReceptor">
+            <input class="submitFuerza submitGeneral" id="calcularTotalFuerza" type="submit" value="Calcular">
+            <h3 class="resultadoFuerza resultadoGeneral" id="resultadoFuerza"></h3>
+            <div class="buttonVolver" id="volver" href="">
+                Volver
+            </div>
+        </div>
+
+        <div class="labelsInputTecnica labelsGeneral" id="labelsInputTecnica">
+            <h3 class="descripcionTecnica descripcionGeneral">Actualmente el daño que se recibe dependerá de cuanto chakra te es golpeado. Ese nivel de poder que te golpea se aumenta un 50% de la base y el resultado final sería lo que te quita.</h3>
+            <label class="labelTecnica label1" for="inputTecnica">Coloque el chakra de la tecnica recibida</label>
+            <input class="inputTecnica input1" type="text" id="inputTecnica">
+            <label class="labelReceptorTecnica label2" for="inputReceptorTecnica">Coloca tu chakra restante</label>
+            <input class="inputReceptorTecnica input2" type="text" id="inputReceptorTecnica">
+            <input class="submitTecnica resultadoGeneral" id="calcularTotalTecnica" type="submit" value="Calcular">
+            <h3 class="resultadoTecnica resultadoGeneral" id="resultadoTecnica"></h3>
+            <div class="buttonVolver buttonVolverTecnica" id="volverTecnica" href="">
+                Volver
+            </div>
+        </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- 
     <div class="cuadroInputs">
-        <label for="inputFuerza">Coloque la fuerza del usuario</label>
-        <input type="text" id="inputFuerza">
-        <label for="inputReceptor">Coloque la fuerza del afectado</label>
-        <input type="text" id="inputReceptor">
-        <div>Esta pagina no esta funcionando, por favor solo reinicia para usar los prompts.</div>
-    </div>
-    <div>
-        
-    </div>
+
+    </div> -->
 
 
 
