@@ -21,6 +21,14 @@ body{
     font-family:Bainsley;
     color: aqua;
 }
+.tituloImg{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
 .cuadroInputs{
     display: flex;
     flex-direction: column;
@@ -30,7 +38,7 @@ body{
     left: 0;
     margin: 0 auto;
     top: 250px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(51, 51, 51, 0.9);
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
@@ -38,6 +46,9 @@ body{
     width: 480px;
     height: 480px;
     border-radius: 20px;
+    box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
+    -webkit-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
+    -moz-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
 }
 
 /*  */
@@ -136,7 +147,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .labelsInputTecnica{
@@ -172,6 +182,21 @@ body{
 .submitGeneral{
     position: relative;
     top: 90px;
+}
+
+.input1, .input2{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.input1:placeholder-shown{
+    text-align: center;
+    font-family: Naruto;
+}
+.input2:placeholder-shown{
+    text-align: center;
+    font-family: Naruto;
 }
 
 .resultadoGeneral{

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Calculadora 1.2</title>
+    <title>Calculadora 1.3</title>
 </head>
 <body>
-    <h1 class="TituloCalculadora">Calculadora de Daño Shinobi 1.2</h1>
+    <img class="tituloImg" src="./img/calculadora.png" alt="">
     <div class="cuadroInputs" id="cuadroInputs">
         <h2 class="tituloCalcular" id="titulo">Elije el tipo de calculo que deseas realizar</h2>
         <div class="buttonGolpes" id="golpes" href="">
@@ -25,10 +25,10 @@
 
         <div class="labelsInputFuerza labelsGeneral" id="labelsInputFuerza">
             <h3 class="descripcionFuerza descripcionGeneral">Los golpes y/o patadas dados con fuerza son multiplicados x2. El calculo se realiza restando la fuerza del golpe a la fuerza tuya, posteriormente añadiendo la multiplicacion para definir cuanto daño te realizo.</h3>
-            <label class="labelFuerza label1" for="inputFuerza">Coloque la fuerza del ataque recibido</label>
-            <input class="inputFuerza input1" type="text" id="inputFuerza">
-            <label class="labelRecepter label2" for="inputReceptor">Coloca tu fuerza</label>
-            <input class="inputRecepter input2" type="text" id="inputReceptor">
+            <!-- <label class="labelFuerza label1" for="inputFuerza">Coloque la fuerza del ataque recibido</label> -->
+            <input class="inputFuerza input1" placeholder="Coloca la fuerza del ataque recibido" type="text" id="inputFuerza">
+            <!-- <label class="labelRecepter label2" for="inputReceptor">Coloca tu fuerza</label> -->
+            <input class="inputRecepter input2" placeholder="Coloca la fuerza de tu personaje" type="text" id="inputReceptor">
             <input class="submitFuerza submitGeneral" id="calcularTotalFuerza" type="submit" value="Calcular">
             <h3 class="resultadoFuerza resultadoGeneral" id="resultadoFuerza"></h3>
             <div class="buttonVolver" id="volver" href="">
