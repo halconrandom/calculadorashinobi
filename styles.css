@@ -16,11 +16,6 @@ body{
     margin: 0 auto;
 }
 
-.TituloCalculadora{
-    position: absolute;
-    font-family:Bainsley;
-    color: aqua;
-}
 .tituloImg{
     position: absolute;
     right: 0;
@@ -44,17 +39,80 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
     width: 480px;
-    height: 480px;
+    height: 600px;
     border-radius: 20px;
     box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
     -webkit-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
     -moz-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
 }
+/* Esto manipula elementos generales de cualquier pantalla. Para manipular uno de manera más especifica, revisa la seccion relacionada */
+.input1{
+    position: relative;
+    top: 50px;
+}
+.input2{
+    position: relative;
+    top: 70px;
+}
+.submitGeneral{
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 225px;
+    border-radius: 10px;
+    background-color: rgb(51, 51, 51, 0.9);
+
+}
+.submitGeneral:hover{
+    transition: all .4s ease;
+    background-color: rgba(82, 82, 82, 0.9);
+}
+
+.input1, .input2{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+.input1:placeholder-shown{
+    text-align: center;
+    font-family: Naruto;
+}
+.input2:placeholder-shown{
+    text-align: center;
+    font-family: Naruto;
+}
+.buttonVolver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 520px;
+    height: 20px;
+    width: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: rgb(51, 51, 51, 0.9);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+.buttonVolver:hover{
+    transition: all .4s ease;
+    background-color: rgba(82, 82, 82, 0.9);
+}
+
+/*  */
+
+
+
 
 /*  */
 /*  */
 /*  */
-/* !PRIMERA PANTALLA */
+/* !PRIMERA PANTALLA - INDEX GENERAL */
 
 
 .tituloCalcular{
@@ -74,15 +132,16 @@ body{
     text-decoration: none;
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
-    background-color: rgb(136, 136, 136);
+    background-color: rgb(51, 51, 51, 0.9);
     padding: 30px;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
+    border-width: 1px;
 }
 .buttonGolpes:hover{
     transition: all .4s ease;
-    background-color: rgb(100, 100, 100) ;
+    background-color: rgba(82, 82, 82, 0.9);
 }
 
 .buttonChakra{
@@ -97,38 +156,16 @@ body{
     text-decoration: none;
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
-    background-color: rgb(136, 136, 136);
+    background-color: rgb(51, 51, 51, 0.9);
     padding: 30px;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
+    border-width: 1px;
 }
 .buttonChakra:hover{
     transition: all .4s ease;
-    background-color: rgb(100, 100, 100) ;
-}
-
-.buttonShurikenjutsu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 90px;
-    width: 200px;
-    font-family: Bainsley;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
-    background-color: rgb(136, 136, 136);
-    padding: 30px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: black;
-}
-.buttonShurikenjutsu:hover{
-    transition: all .4s ease;
-    background-color: rgb(100, 100, 100) ;
+    background-color: rgba(82, 82, 82, 0.9);
 }
 
 .cuadroInputs div{
@@ -159,9 +196,10 @@ body{
 }
 
 .descripcionGeneral{
-    font-family: Bainsley;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 13px;
+    color: white;
 }
 
 .label1, .label2{
@@ -170,71 +208,62 @@ body{
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
 }
-
-.input1, .label1{
-    position: relative;
-    top: 50px;
-}
-.label2, .input2{
-    position: relative;
-    top: 70px;
-}
-.submitGeneral{
-    position: relative;
-    top: 90px;
-}
-
-.input1, .input2{
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-}
-
-.input1:placeholder-shown{
-    text-align: center;
-    font-family: Naruto;
-}
-.input2:placeholder-shown{
-    text-align: center;
-    font-family: Naruto;
-}
-
 .resultadoGeneral{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 100px;
-    font-family: Bainsley;
+    position: absolute;
+    top: 400px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
-    color: black;
-    text-shadow: white -2px 0px, white 0px 2px, white 2px 0px, white 0px -2px;
-}
-
-
-.buttonVolver{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 90px;
-    height: 10px;
-    height: 5px;
-    width: 30px;
-    font-family: Bainsley;
-    font-size: 14px;
-    text-decoration: none;
     color: white;
-    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
-    background-color: rgb(136, 136, 136);
-    padding: 30px;
+}
+
+
+/* PARA FUERZA */
+
+.boxRadios{
+    position: absolute;
+    top: 280px;
     border-radius: 10px;
-    border-style: solid;
-    border-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid rgb(110, 18, 18);
+    width: 500px;
+    height: 130px;
+    z-index: ;
 }
-.buttonVolver:hover{
-    transition: all .4s ease;
-    background-color: rgb(100, 100, 100) ;
+.boxRadios p{
+    position: absolute;
+    top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font: 12px;
+    
 }
+.radiosFuerza{
+    position: absolute;
+    top: 350px;
+    z-index: 3;
+
+}
+.radiosFuerza input{
+    display: none;
+}
+.radiosFuerza label{
+    display: inline-block;
+    background-color: rgba(82, 82, 82, 0.3);;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.radiosFuerza input:checked + label{
+    background-color:#bfb;
+    border-color: #4c4;
+}
+
 
