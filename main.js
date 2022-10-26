@@ -19,21 +19,25 @@ let btnSubmit = document.getElementById('calcularTotalFuerza');
 btnSubmit.onclick = function(){calculoSubmitFuerza()}
 
 function calculoSubmitFuerza(){
-    // let fuerzaPJ = document.getElementById("inputReceptor").value
-    // let fuerzaEnemigo = document.getElementById("inputFuerza").value
+    let fuerzaPJ = document.getElementById("inputReceptor").value
+    let fuerzaEnemigo = document.getElementById("inputFuerza").value
     if (document.getElementById("radioFuerzaNormal").checked){
-        alert('Hola, esto esta funcionando');
+        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 2);
+        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
+        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
         return;
     }else if (document.getElementById("radioFuerza1.5").checked){
-        alert('ESTO NO FUNCIONA');
+        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 1.5);
+        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
+        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
         return;
     }else if (document.getElementById("radioFuerza1.25").checked){
-        alert('ESTO QUIZAS FUNCIONE');
+        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 1.25);
+        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
+        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
         return;
     }
-    // let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 2);
-    // if (totalDañoFuerza < 0) totalDañoFuerza = 0;
-    // document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
+
 }
 
 

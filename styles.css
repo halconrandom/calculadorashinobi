@@ -227,12 +227,11 @@ body{
     position: absolute;
     top: 280px;
     border-radius: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 10px;
     border: 2px solid rgb(110, 18, 18);
     width: 500px;
     height: 130px;
-    z-index: ;
 }
 .boxRadios p{
     position: absolute;
