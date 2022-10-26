@@ -28,7 +28,7 @@
             <input class="inputFuerza input1" placeholder="Coloca la fuerza del ataque recibido" type="text" id="inputFuerza">
             <input class="inputRecepter input2" placeholder="Coloca la fuerza de tu personaje" type="text" id="inputReceptor">
             <input class="submitFuerza submitGeneral" id="calcularTotalFuerza" type="submit" value="Calcular">
-            <div class="boxRadios">
+            <div class="boxRadios boxRadiosFuerza">
                 <p>Con la nueva actualización en Shinobi, ahora el cálculo de la fuerza cambia. Si tu porcentaje de maestría de Taijutsu es mayor a 50%, el daño es x1.5 y si tienes más del 90%, el daño será por 1.25. </p>
             </div>
             <div class="radiosFuerza">
@@ -42,8 +42,6 @@
             </div>
             
 
-
-
             <h3 class="resultadoFuerza resultadoGeneral" id="resultadoFuerza"></h3>
             <div class="buttonVolver" id="volver" href="">
                 Volver
@@ -52,16 +50,27 @@
 
         <div class="labelsInputTecnica labelsGeneral" id="labelsInputTecnica">
             <h3 class="descripcionTecnica descripcionGeneral">Actualmente el daño que se recibe dependerá de cuanto chakra te es golpeado. Ese nivel de poder que te golpea se aumenta un 50% de la base y el resultado final sería lo que te quita.</h3>
-            <label class="labelTecnica label1" for="inputTecnica">Coloque el chakra de la tecnica recibida</label>
-            <input class="inputTecnica input1" type="text" id="inputTecnica">
-            <label class="labelReceptorTecnica label2" for="inputReceptorTecnica">Coloca tu chakra restante</label>
-            <input class="inputReceptorTecnica input2" type="text" id="inputReceptorTecnica">
+            <input class="inputTecnica input1" type="text" placeholder="Coloca el chakra de la tecnica recibida" id="inputTecnica">
+            <input class="inputReceptorTecnica input2" placeholder="Coloca tu chakra restante" type="text" id="inputReceptorTecnica">
             <div class="seccionFinal">
-            <input class="submitTecnica resultadoGeneral" id="calcularTotalTecnica" type="submit" value="Calcular">
+            <input class="submitTecnica submitGeneral" id="calcularTotalTecnica" type="submit" value="Calcular">
+            <div class="boxRadios boxRadiosChakra">
+                <p>Ten en cuenta las variables de daño. Si alguien te ataca con una técnica con Senjutsu, coloca la cifra del ataque sin el buffo, así la calculadora suma de manera correcta. Ten en cuenta si bloqueas el ataque de igual manera.</p>
+            </div>
+
+            <div class="radiosChakra radiosGeneral">
+                <input class="radioChakraNormal" type="radio" name="Chakra" id="radioChakraNormal">
+                <label for="radioChakraNormal">Normal</label>
+                <input class="radioSenjutsu" type="radio" name="Chakra" id="radioSenjutsu">
+                <label for="radioSenjutsu">Senjutsu</label>
+                <input class="radiobloqueo" type="checkbox" name="#" id="radioBloqueo">
+                <label for="radioBloqueo">Bloqueado</label>
+            </div>
+
+
             <div class="buttonVolver buttonVolverTecnica" id="volverTecnica" href="">
                 Volver
             </div>
-
             <h3 class="resultadoTecnica resultadoGeneral" id="resultadoTecnica"></h3>
 
         </div>

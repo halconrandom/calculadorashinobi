@@ -55,6 +55,9 @@ body{
     top: 70px;
 }
 .submitGeneral{
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     cursor: pointer;
     height: 50px;
     width: 100px;
@@ -87,6 +90,9 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     top: 520px;
     height: 20px;
     width: 70px;
@@ -120,6 +126,7 @@ body{
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
 }
+
 .buttonGolpes{
     display: flex;
     align-items: center;
@@ -187,15 +194,18 @@ body{
 }
 
 .labelsInputTecnica{
-    position: relative;
+    position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 
 .descripcionGeneral{
+    
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 13px;
@@ -239,7 +249,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font: 12px;
-    
 }
 .radiosFuerza{
     position: absolute;
@@ -266,3 +275,58 @@ body{
 }
 
 
+/*  */
+/*  */
+/* PARA CHAKRA */
+
+
+.descripcionTecnica{
+    position: relative;
+    top: 50px;
+    padding: 20px;
+}
+.submitTecnica{
+    top: 260px;
+}
+
+.radiosChakra{
+    position: relative;
+    top: 215px;
+}
+
+.boxRadiosChakra{
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 315px;
+}
+.buttonVolverTecnica{
+    top: 590px;
+}
+
+.radiosChakra input{
+    display: none;
+}
+.radiosChakra label{
+    display: inline-block;
+    background-color: rgba(82, 82, 82, 0.3);;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.radiosChakra input:checked + label{
+    background-color:#bfb;
+    border-color: #4c4;
+}
+
+.resultadoTecnica{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 470px;
+    padding: 20px;
+}
