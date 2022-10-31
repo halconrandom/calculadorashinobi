@@ -18,9 +18,13 @@ function clickGolpes(){
 let btnSubmit = document.getElementById('calcularTotalFuerza');
 btnSubmit.onclick = function(){calculoSubmitFuerza()}
 
+
+
 function calculoSubmitFuerza(){
     let fuerzaPJ = document.getElementById("inputReceptor").value
     let fuerzaEnemigo = document.getElementById("inputFuerza").value
+    localStorage.setItem("repoInputReceptor", fuerzaPJ);
+    localStorage.setItem("repoInputFuerzaEnemiga", fuerzaEnemigo);
     if (document.getElementById("radioFuerzaNormal").checked){
         let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 2);
         if (totalDañoFuerza < 0) totalDañoFuerza = 0;
@@ -39,6 +43,12 @@ function calculoSubmitFuerza(){
     }
 
 }
+
+document.getElementById('buttonRecuperar').onclick = function (){
+    document.getElementById("inputReceptor").value = localStorage.getItem("repoInputReceptor")
+    fuerzaEnemigo = document.getElementById("inputFuerza").value = localStorage.getItem("repoInputFuerzaEnemiga")
+};
+
 
 
 // ESTE DE ACÁ ABAJO ES PARA CONFIGURAR TECNICA
@@ -63,6 +73,8 @@ btnSubmitChakra.onclick = function(){calculoSubmitChakra()}
 function calculoSubmitChakra(){
     let chakraPJ = document.getElementById("inputReceptorTecnica").value
     let chakraTecnicaEnemigo = document.getElementById("inputTecnica").value
+    localStorage.setItem("repoInputReceptorTecnica", chakraPJ);
+    localStorage.setItem("repoInputTecnicaEnemiga", chakraTecnicaEnemigo);
     if (document.getElementById("radioChakraNormal").checked){
         if(document.getElementById("radioBloqueo").checked){
             let calculo_tecnica = (chakraTecnicaEnemigo * 0.4)
@@ -99,3 +111,8 @@ function calculoSubmitChakra(){
         } 
     }
 }
+
+document.getElementById('buttonRecuperarChakra').onclick = function (){
+    document.getElementById("inputReceptorTecnica").value = localStorage.getItem("repoInputReceptorTecnica")
+    fuerzaEnemigo = document.getElementById("inputTecnica").value = localStorage.getItem("repoInputTecnicaEnemiga")
+};
