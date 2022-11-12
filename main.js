@@ -1,6 +1,4 @@
 // PARA CONFIGURAR TAIJUTSU
-
-
 let btnGolpes = document.getElementById('golpes');
 btnGolpes.onclick = function(){clickGolpes()}
 let btnVolver = document.getElementById('volver');
@@ -10,6 +8,7 @@ btnVolver.onclick = () => {window.location.reload();}
 function clickGolpes(){
         document.getElementById('golpes').style.display = 'none';
         document.getElementById('chakra').style.display = 'none';
+        document.getElementById('resistenciaChakra').style.display = 'none';
         document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
         document.getElementById('labelsInputFuerza').style.display = 'flex';
 }
@@ -62,6 +61,7 @@ btnVolverTecnica.onclick = () => {window.location.reload();}
 function clickChakra(){
         document.getElementById('golpes').style.display = 'none';
         document.getElementById('chakra').style.display = 'none';
+        document.getElementById('resistenciaChakra').style.display = 'none';
         document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
         document.getElementById('labelsInputTecnica').style.display = 'flex';
 }
@@ -116,3 +116,53 @@ document.getElementById('buttonRecuperarChakra').onclick = function (){
     document.getElementById("inputReceptorTecnica").value = localStorage.getItem("repoInputReceptorTecnica")
     fuerzaEnemigo = document.getElementById("inputTecnica").value = localStorage.getItem("repoInputTecnicaEnemiga")
 };
+
+
+
+// ESTE DE ACÁ ABAJO ES PARA CONFIGURAR RESISTENCIA DE CHAKRA
+
+
+let btnResistenciaChakra = document.getElementById('resistenciaChakra');
+btnResistenciaChakra.onclick = function(){clickResistenciaChakra()}
+let btnVolverResistenciaChakra = document.getElementById('volverresistenciaChakra');
+btnVolverResistenciaChakra.onclick = () => {window.location.reload();}
+
+function clickResistenciaChakra(){
+    document.getElementById('golpes').style.display = 'none';
+    document.getElementById('chakra').style.display = 'none';
+    document.getElementById('resistenciaChakra').style.display = 'none';
+    document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
+    document.getElementById('labelsInputResistenciaChakra').style.display = 'flex';
+}
+
+
+let btncalcularResistenciaChakra = document.getElementById('calcularTotalResistenciaChakra');
+btncalcularResistenciaChakra.onclick = function(){calculoSubmitResistenciaChakra()}
+
+function calculoSubmitResistenciaChakra(){
+let chakraPJTotalResistencia = document.getElementById("inputChakraTotalResistencia").value
+let chakraPJRestanteResistencia = document.getElementById("inputChakraRestanteResistencia").value
+
+
+let chakraResistencia35 = (chakraPJTotalResistencia*0.35)
+let chakraResistencia15 = (chakraPJTotalResistencia*0.15)
+let chakraResistencia05 = (chakraPJTotalResistencia*0.05)
+
+
+if(chakraPJRestanteResistencia <= 0){
+    document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje le queda 0% de Chakra por lo que quedas inconsciente a no ser que poseas alguna técnica o habilidad que lo evite. No podrás recargar chakra estando en este estado y si sigues recibiendo daño, corres el riesgo de morir.';
+    return;
+}else if(chakraPJRestanteResistencia <= chakraResistencia05){
+    document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje le queda 5% de Chakra (o menos) por lo que estás tan exhausto que no puedes ni moverte. Tu unica salvación si tienes la oportunidad es recargar chakra';
+}else if(chakraPJRestanteResistencia <= chakraResistencia15){
+    document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje le queda 15% de Chakra (o menos) por lo que estás muy cansado. Tu fuerza se reduce un 15%.';
+}else if(chakraPJRestanteResistencia <= chakraResistencia35){
+    document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje le queda 35% de Chakra (o menos) por lo que empiezas a sentirte agotado. Tu velocidad de movimiento se reduce un 10% y tus reflejos un 5%, provocando que tu percepcion se vuelve dificultosa y tus pasos sean más pesados.';
+}else{
+    document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje aún tiene bastante chakra por lo que no tiene problemas de ningun tipo para continuar.';
+}
+
+
+
+
+}
