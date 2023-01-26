@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <title>Respaldo de Ficha en Navegador</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="fichaBackground">
+        <label for="nombrePJ" id="labelNombrePJ">Nombre del PJ</label>
+        <input type="text" id="nombrePJ" >
+
+        <label for="nombreUser" id="labelNombreUser">Nombre del Usuario</label>
+        <input type="text" id="nombreUser">
+
+        <label for="Clan" id="labelClan">Clan</label>
+        <input type="text" id="Clan">
+
+        <label for="ChakraInicial" id="labelChakraInicial">Tipo de Chakra</label>
+        <input type="text" id="ChakraInicial">
+
+        <label for="Rango" id="labelRango">Rango</label>
+        <input type="text" id="Rango">
+
+        <label for="Edad" id="labelEdad">Edad</label>
+        <input type="text" id="Edad">
+
+        <!-- <label for="Altura" id="labelAltura">Altura</label>
+        <input type="text" id="Altura">
+
+        <label for="Peso" id="labelPeso">Peso</label>
+        <input type="text" id="Peso"> -->
+<!-- 
+        <label for="puntosFortaleza" id="labelPuntosFortaleza">Puntos de Fortaleza</label>
+        <input type="text" id="puntosFortaleza">
+
+        <label for="puntosDebilidad" id="labelpuntosDebilidad">Puntos de Debilidad</label>
+        <input type="text" id="puntosDebilidad"> -->
+
+
+        <label for="inputFuerzaChart">Stat: Fuerza</label>
+        <input type="number" id="inputFuerzaChart" class="inputFuerzaChart">
+
+
+        <label for="inputFuerzaChart">Stat: V. Movimiento</label>
+        <input type="number" id="inputVMovChart" class="inputVMovChart">
+
+        
+        <label for="inputFuerzaChart">Stat: V. Tecnica</label>
+        <input type="number" id="inputVTecChart" class="inputVTecChart">
+
+        
+        <label for="inputFuerzaChart">Stat: Reflejo</label>
+        <input type="number" id="inputReflejoChart" class="inputReflejoChart">
+
+
+            <input type="file" name="imgFichaInput" id="imgFichaInput" accept="image/*">
+            <button type="button" id="clear-storage-button">Limpiar almacenamiento local</button>
+            <button id="capturarImagen">Capturar imagen</button>
+
+        <select name="opcionesAldeas" id="aldeasOption">
+            <option value="noelegir" id="noelegir">Elige una Aldea</option>
+            <option value="aldeaCR" id="aldeaCR">Republic City</option>
+            <option value="" id="aldeakiri">Kirigakure</option>
+            <option value="" id="aldeakumo">Kumogakure</option>
+            <option value="" id="aldeasuna">Sunagakure</option>
+            <option value="" id="aldeaiwa">Iwagakure</option>
+            <option value="" id="aldeaoto">Otogakure</option>
+            <option value="" id="aldeareon">Reongakure</option>
+            <option value="" id="aldeayuki">Yukigakure</option>
+        </select>
+
+
+
+        <!-- <button onclick="updateData()">Actualizar</button> -->
+        <button id="submitGeneralFicha">Generar Ficha</button>
+    </div>
+
+
+
+    <div class="fondoFichaTotal" id="fondoFichaTotal">
+        <div class="aldeaPNG" id="aldeaPNG"></div>
+        <div class="imgFicha" id="imgFicha"></div>
+        <div class="rellenoLetra">Nombre: <p id="nombrePJFicha"></p></div>
+        <div class="rellenoLetra">Usuario: <p id="usuarioFicha"></p></div>
+        <div class="rellenoLetra">Clan: <p id="clanFicha"></p></div>
+        <div class="rellenoLetra">Rango: <p id="rangoFicha"></p></div>
+        <div class="rellenoLetra">Tipo de Chakra: <p id="tipoChakraFicha"></p></div>
+        <div id="chartRadar"></div>
+
+
+    </div>
+
+
+
+</body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+<script src="./charts.js"></script>
+</html>

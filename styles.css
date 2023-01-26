@@ -10,11 +10,15 @@
     font-family: Maven;
     src: url(./fonts/MavenPro-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: Smile;
+    src: url(./fonts/Name\ Smile.otf);
+}
 
 body{
     display: flex;
     justify-content: center;
-    background-image: url(./img/fondo.png);
+    background-image: url(./img/annular_eclipse_by_bisbiswas_ddchykh.jpg);
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -49,6 +53,18 @@ body{
     -webkit-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
     -moz-box-shadow: -7px 8px 34px 5px rgba(0,0,0,0.65);
 }
+
+
+
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
 /* Esto manipula elementos generales de cualquier pantalla. Para manipular uno de manera más especifica, revisa la seccion relacionada */
 .input1{
     position: relative;
@@ -157,6 +173,7 @@ body{
     font-family: Naruto;
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    font-size: 15px;
 }
 
 .buttonGolpes{
@@ -231,10 +248,37 @@ body{
     transition: all .4s ease;
     background-color: rgba(82, 82, 82, 0.9);
 }
+
+.respaldarFichaButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 110px;
+    width: 200px;
+    font-family: Bainsley;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
+    background-color: rgb(51, 51, 51, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.respaldarFichaButton:hover{
+    transition: all .4s ease;
+    background-color: rgba(82, 82, 82, 0.9);
+}
+
+
 .cuadroInputs div{
     -webkit-user-select: none;
     cursor: pointer;
 }
+
 
 
 /*  */
@@ -441,4 +485,89 @@ body{
     top: 340px;
     padding: 20px;
     font-size: 18px;
+}
+
+/*  */
+/*  */
+/*  */
+/* TRABAJA CHARTS.HTML AQUI */
+/*  */
+/*  */
+/*  */
+
+
+/* ESTE CONTROLA EL FONDO DEL FORM */
+.fichaBackground{
+    padding: 20px;
+    background-color: rgba(125, 91, 166, 0.5);
+    border-radius: 10px;
+    width: 400px;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 200px;
+
+}
+
+/* ESTE CONTROLA EL FONDO DE LA FICHA */
+.fondoFichaTotal{
+    position: absolute;
+    left: 1000px;
+    background-image: url(./img/backgroundficha.jpg);
+    height: 800px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.rellenoLetra{
+    position: relative;
+    left: 20px;
+    top: -200px;
+    display: flex;
+    margin-top: 15px;
+    padding-left: 5px;
+    background-color: rgb(204, 158, 99);
+    border: 2px solid rgb(192, 146, 87);
+    height: 30px;
+    width: 330px;
+
+    font-family: Smile;
+    align-items: center;
+    font-size: 12px;
+}
+
+.rellenoLetra p{
+    position: relative;
+    left: 50px;
+}
+
+
+.aldeaPNG{
+    position: relative;
+    background-size: cover;
+    top: 30px;
+    left: 30px;
+    background-color: white;
+    width: 163px;
+    height: 104px;
+}
+.imgFicha{
+    position: relative;
+    top: 40px;
+    left: 360px;
+    background-size: cover;
+    border-radius: 10px;
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    z-index: 2;
+}
+
+#chartRadar{
+    position: relative;
+    left: -80px;
+    top: 130px;
+    width: 500px;
+    height: 400px;
 }

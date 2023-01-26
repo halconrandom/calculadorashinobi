@@ -8,6 +8,7 @@ btnVolver.onclick = () => {window.location.reload();}
 function clickGolpes(){
         document.getElementById('golpes').style.display = 'none';
         document.getElementById('chakra').style.display = 'none';
+        document.getElementById('respaldarFichaButton').style.display = 'none';
         document.getElementById('resistenciaChakra').style.display = 'none';
         document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
         document.getElementById('labelsInputFuerza').style.display = 'flex';
@@ -61,6 +62,7 @@ btnVolverTecnica.onclick = () => {window.location.reload();}
 function clickChakra(){
         document.getElementById('golpes').style.display = 'none';
         document.getElementById('chakra').style.display = 'none';
+        document.getElementById('respaldarFichaButton').style.display = 'none';
         document.getElementById('resistenciaChakra').style.display = 'none';
         document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
         document.getElementById('labelsInputTecnica').style.display = 'flex';
@@ -130,6 +132,7 @@ btnVolverResistenciaChakra.onclick = () => {window.location.reload();}
 function clickResistenciaChakra(){
     document.getElementById('golpes').style.display = 'none';
     document.getElementById('chakra').style.display = 'none';
+    document.getElementById('respaldarFichaButton').style.display = 'none';
     document.getElementById('resistenciaChakra').style.display = 'none';
     document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
     document.getElementById('labelsInputResistenciaChakra').style.display = 'flex';
@@ -161,8 +164,10 @@ if(chakraPJRestanteResistencia <= 0){
 }else{
     document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje aún tiene bastante chakra por lo que no tiene problemas de ningun tipo para continuar.';
 }
-
-
-
-
 }
+
+// 
+// 
+// De aquí para abajo es para trabajar cosas simples del boton Ficha, para más info revisar el chart.js 
+// 
+// 
