@@ -29,18 +29,6 @@
         <label for="Edad" id="labelEdad">Edad</label>
         <input type="text" id="Edad">
 
-        <!-- <label for="Altura" id="labelAltura">Altura</label>
-        <input type="text" id="Altura">
-
-        <label for="Peso" id="labelPeso">Peso</label>
-        <input type="text" id="Peso"> -->
-<!-- 
-        <label for="puntosFortaleza" id="labelPuntosFortaleza">Puntos de Fortaleza</label>
-        <input type="text" id="puntosFortaleza">
-
-        <label for="puntosDebilidad" id="labelpuntosDebilidad">Puntos de Debilidad</label>
-        <input type="text" id="puntosDebilidad"> -->
-
 
         <label for="inputFuerzaChart">Stat: Fuerza</label>
         <input type="number" id="inputFuerzaChart" class="inputFuerzaChart">
@@ -57,21 +45,35 @@
         <label for="inputFuerzaChart">Stat: Reflejo</label>
         <input type="number" id="inputReflejoChart" class="inputReflejoChart">
 
+            <label for="imgFichaInput" class="labelImagenesGeneral">Imagen Personaje</label>
+            <input type="file" name="imgFichaInput" class="inputImagenesGeneral" id="imgFichaInput" accept="image/*">
 
-            <input type="file" name="imgFichaInput" id="imgFichaInput" accept="image/*">
+            <label for="imgFichaCompa1Input" class="labelImagenesGeneral">Imagen Compañero 1</label>
+            <input type="file" name="imgFichaCompa1Input" id="imgFichaCompa1Input" class="inputImagenesGeneral" accept="image/*">
+
+            <label for="imgFichaCompa2Input" class="labelImagenesGeneral">Imagen Compañero 2</label>
+            <input type="file" name="imgFichaCompa2Input" id="imgFichaCompa2Input" class="inputImagenesGeneral" accept="image/*">
+
+            <label for="imgFichaCompa3Input" class="labelImagenesGeneral">Imagen Compañero 3</label>
+            <input type="file" name="imgFichaCompa3Input" id="imgFichaCompa3Input" class="inputImagenesGeneral" accept="image/*">
+            
+
+
+
+
             <button type="button" id="clear-storage-button">Limpiar almacenamiento local</button>
             <button id="capturarImagen">Capturar imagen</button>
 
         <select name="opcionesAldeas" id="aldeasOption">
             <option value="noelegir" id="noelegir">Elige una Aldea</option>
             <option value="aldeaCR" id="aldeaCR">Republic City</option>
-            <option value="" id="aldeakiri">Kirigakure</option>
-            <option value="" id="aldeakumo">Kumogakure</option>
-            <option value="" id="aldeasuna">Sunagakure</option>
-            <option value="" id="aldeaiwa">Iwagakure</option>
-            <option value="" id="aldeaoto">Otogakure</option>
-            <option value="" id="aldeareon">Reongakure</option>
-            <option value="" id="aldeayuki">Yukigakure</option>
+            <option value="aldeakiri" id="aldeakiri">Kirigakure</option>
+            <option value="aldeakumo" id="aldeakumo">Kumogakure</option>
+            <option value="aldeasuna" id="aldeasuna">Sunagakure</option>
+            <option value="aldeaiwa" id="aldeaiwa">Iwagakure</option>
+            <option value="aldeaoto" id="aldeaoto">Otogakure</option>
+            <option value="aldeareon" id="aldeareon">Reongakure</option>
+            <option value="aldeayuki" id="aldeayuki">Yukigakure</option>
         </select>
 
 
@@ -85,12 +87,22 @@
     <div class="fondoFichaTotal" id="fondoFichaTotal">
         <div class="aldeaPNG" id="aldeaPNG"></div>
         <div class="imgFicha" id="imgFicha"></div>
-        <div class="rellenoLetra">Nombre: <p id="nombrePJFicha"></p></div>
-        <div class="rellenoLetra">Usuario: <p id="usuarioFicha"></p></div>
-        <div class="rellenoLetra">Clan: <p id="clanFicha"></p></div>
-        <div class="rellenoLetra">Rango: <p id="rangoFicha"></p></div>
-        <div class="rellenoLetra">Tipo de Chakra: <p id="tipoChakraFicha"></p></div>
+        <div class="rellenoLetra"><p class="tituloPCasillas">Nombre</p> <p id="nombrePJFicha" class="subtituloPCasillas"></p></div>
+        <div class="rellenoLetra"><p class="tituloPCasillas">Usuario</p> <p id="usuarioFicha" class="subtituloPCasillas"></p></div>
+        <div class="rellenoLetra"><p class="tituloPCasillas">Clan</p> <p id="clanFicha" class="subtituloPCasillas"></p></div>
+        <div class="rellenoLetra"><p class="tituloPCasillas">Rango</p> <p id="rangoFicha" class="subtituloPCasillas"></p></div>
+        <div class="rellenoLetra"><p class="tituloPCasillas">Tipo de Chakra</p> <p id="tipoChakraFicha" class="subtituloPCasillas"></p></div>
+
         <div id="chartRadar"></div>
+        <div class="compañerostitulo">Equipo</div>
+        <div class="compañerosFichaFondo">
+            <div class="equipoCompañerosficha" id="equipoCompañero1"></div>
+            <div class="equipoCompañerosficha" id="equipoCompañero2"></div>
+            <div class="equipoCompañerosficha" id="equipoCompañero3"></div>
+        </div>
+
+
+
 
 
     </div>

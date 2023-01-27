@@ -1,3 +1,5 @@
+
+
 Highcharts.chart('chartRadar', {
 
     chart: {
@@ -130,18 +132,43 @@ capturarImagenBtn.addEventListener("click", () => {
 
 let opcionesAldea = document.getElementById("aldeasOption");
 let btnsubmit = document.getElementById("submitGeneralFicha");
+
+function infoBasicaNinja(){
+    nombrePJFicha.innerHTML = document.getElementById('nombrePJ').value
+    usuarioFicha.innerHTML = document.getElementById('nombreUser').value
+    clanFicha.innerHTML = document.getElementById('Clan').value
+    rangoFicha.innerHTML = document.getElementById('Rango').value
+    tipoChakraFicha.innerHTML = document.getElementById('ChakraInicial').value
+}
+
 btnsubmit.addEventListener("click", function() {
    if (opcionesAldea.value === "noelegir") {
-     alert("Estas eligiendo una opción no válida");
      return;
-   } else(opcionesAldea.value === "aldeaCR");{
+   }else if(opcionesAldea.value === "aldeaCR"){
      document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/konoha.png')";
-     nombrePJFicha.innerHTML = document.getElementById('nombrePJ').value
-     usuarioFicha.innerHTML = document.getElementById('nombreUser').value
-     clanFicha.innerHTML = document.getElementById('Clan').value
-     rangoFicha.innerHTML = document.getElementById('Rango').value
-     tipoChakraFicha.innerHTML = document.getElementById('ChakraInicial').value
+    infoBasicaNinja()
      return;
+   }else if(opcionesAldea.value === "aldeakumo"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/kumogakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeakiri"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/kirigakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeasuna"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/sunagakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeaiwa"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/iwagakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeaoto"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/otogakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeareon"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/reongakure.png')";
+    infoBasicaNinja()
+   }else if(opcionesAldea.value === "aldeayuki"){
+    document.getElementById("aldeaPNG").style.backgroundImage = "url('img/aldeas/yukigakure.png')";
+    infoBasicaNinja()
    }
  });
 
@@ -160,59 +187,50 @@ btnsubmit.addEventListener("click", function() {
 // 
 // 
 
-
-const uploadButton = document.getElementById("submitGeneralFicha");
-const imageInput = document.getElementById("imgFichaInput");
-
-uploadButton.addEventListener("click", () => {
-  const file = imageInput.files[0];
-  if (!file) {
-    alert("Por favor selecciona una imagen");
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onloadend = () => {
-    const base64Image = reader.result;
-    localStorage.setItem("imagenFicha", base64Image);
-  };
-});
-
-
-document.getElementById('submitGeneralFicha').onclick = function (){
-    let base64Image = localStorage.getItem("imagenFicha");
-    document.getElementById('imgFicha').style.backgroundImage = "url(" + base64Image + ")";
- };
-
-
-
- const clearStorageButton = document.getElementById("clear-storage-button");
- clearStorageButton.addEventListener("click", () => {
-     localStorage.removeItem("imagenFicha");
-     alert("El almacenamiento local ha sido limpio");
+document.getElementById("submitGeneralFicha").addEventListener("click", function(){
+    var imgFicha = document.getElementById("imgFichaInput").files[0];
+    var imgFichaCompa1 = document.getElementById("imgFichaCompa1Input").files[0];
+    var imgFichaCompa2 = document.getElementById("imgFichaCompa2Input").files[0];
+    var imgFichaCompa3 = document.getElementById("imgFichaCompa3Input").files[0];
+ 
+    var readerFicha = new FileReader();
+    var readerFichaCompa1 = new FileReader();
+    var readerFichaCompa2 = new FileReader();
+    var readerFichaCompa3 = new FileReader();
+ 
+    readerFicha.onloadend = function(){
+       localStorage.setItem("imgFicha", readerFicha.result);
+       document.getElementById("imgFicha").style.backgroundImage = "url(" + readerFicha.result + ")";
+    }
+    if(imgFicha){
+       readerFicha.readAsDataURL(imgFicha);
+    }
+ 
+    readerFichaCompa1.onloadend = function(){
+       localStorage.setItem("imgFichaCompa1", readerFichaCompa1.result);
+       document.getElementById("equipoCompañero1").style.backgroundImage = "url(" + readerFichaCompa1.result + ")";
+    }
+    if(imgFichaCompa1){
+       readerFichaCompa1.readAsDataURL(imgFichaCompa1);
+    }
+ 
+    readerFichaCompa2.onloadend = function(){
+       localStorage.setItem("imgFichaCompa2", readerFichaCompa2.result);
+       document.getElementById("equipoCompañero2").style.backgroundImage = "url(" + readerFichaCompa2.result + ")";
+    }
+    if(imgFichaCompa2){
+       readerFichaCompa2.readAsDataURL(imgFichaCompa2);
+    }
+ 
+    readerFichaCompa3.onloadend = function(){
+       localStorage.setItem("imgFichaCompa3", readerFichaCompa3.result);
+       document.getElementById("equipoCompañero3").style.backgroundImage = "url(" + readerFichaCompa3.result + ")";
+    }
+    if(imgFichaCompa3){
+       readerFichaCompa3.readAsDataURL(imgFichaCompa3);
+    }
  });
  
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

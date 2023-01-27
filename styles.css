@@ -14,6 +14,10 @@
     font-family: Smile;
     src: url(./fonts/Name\ Smile.otf);
 }
+@font-face {
+    font-family: Big;
+    src: url(./fonts/big_noodle_titling.ttf);
+}
 
 body{
     display: flex;
@@ -510,11 +514,26 @@ body{
 
 }
 
+/* .inputImagenesGeneral{
+    display: none;
+} */
+
+.labelImagenesGeneral{
+    display: flex;
+    margin-top: 10px;
+
+    background-color: rgb(34, 27, 30);
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+}
+
+
 /* ESTE CONTROLA EL FONDO DE LA FICHA */
 .fondoFichaTotal{
     position: absolute;
     left: 1000px;
-    background-image: url(./img/backgroundficha.jpg);
+    background-color: rgba(33, 26, 29);
     height: 800px;
     width: 600px;
     border-radius: 10px;
@@ -527,47 +546,111 @@ body{
     display: flex;
     margin-top: 15px;
     padding-left: 5px;
-    background-color: rgb(204, 158, 99);
-    border: 2px solid rgb(192, 146, 87);
+    background-color: rgba(99, 32, 238, 0.3);
     height: 30px;
     width: 330px;
 
-    font-family: Smile;
-    align-items: center;
-    font-size: 12px;
+
+    
 }
 
-.rellenoLetra p{
-    position: relative;
-    left: 50px;
+.subtituloPCasillas{
+    position: absolute;
+    font-family: Big;
+    font-size: 26px;
+    color: rgb(202, 213, 202);
+
+    left: 75px;
+    top: -25px;
 }
+
+.tituloPCasillas{
+    position: relative;
+    top: -12px;
+    font-family: Big;
+    align-items: center;
+    font-size: 12px;
+    color: rgb(248, 240, 251);
+}
+
+
 
 
 .aldeaPNG{
     position: relative;
     background-size: cover;
     top: 30px;
-    left: 30px;
-    background-color: white;
+    left: 20px;
+    /* background-color: white; */
     width: 163px;
     height: 104px;
 }
 .imgFicha{
     position: relative;
     top: 40px;
-    left: 360px;
-    background-size: cover;
+    left: 370px;
+    background-size: 200px 250px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 10px;
-    background-color: white;
+    /* background-color: white; */
     width: 200px;
     height: 250px;
     z-index: 2;
 }
 
+
+.compañerosFichaFondo{
+    display: flex;
+    flex-direction: row;
+    
+
+    background-color: rgba(99, 32, 238, 0.3);
+    border-radius: 10px;
+    width: 350px;
+    height: 130px;
+
+    position: relative;
+    top: -600px;
+    left: 20px;
+    z-index: 1;
+}
+.compañerostitulo{
+    position: relative;
+    top: -570px;
+    left: 30px;
+    z-index: 2;
+
+    font-size: 16px;
+    font-family: Big;
+    color: rgb(248, 240, 251);
+}
+.equipoCompañerosficha{
+    position: relative;
+    top: 40px;
+    left: 50px;
+    margin-left: 15px;
+
+    border-radius: 8px;
+    font-size: 14px;
+    height: 80px;
+    width: 80px;
+
+    /* background-color: white; */
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+}
+
+
+
+
 #chartRadar{
     position: relative;
     left: -80px;
-    top: 130px;
+    top: -100px;
     width: 500px;
     height: 400px;
 }
