@@ -4,40 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
-    <title>Calculadora 1.3</title>
+    <title>Shinobiherramienta Beta 1.4</title>
 </head>
 <body>
+    
+
     <img class="tituloImg" src="./img/calculadora.png" alt="">
-    <div class="cuadroInputs" id="cuadroInputs">
-        <h2 class="tituloCalcular" id="titulo">Elije el tipo de calculo que deseas realizar</h2>
-        <div class="buttonGolpes" id="golpes" href="">
-            Golpes (Taijutsu)
+
+
+    <div class="container insideBoxIndex" id="insideBoxIndex">
+        <div id="JavaBoxIndex">
+            <p class="text-center pTextoDescripcionIndex">En el continuo avance e intento de mejorar el grupo, se ha creado esta herramienta con la cual podrán realizar diversas actividades para el grupo. Entre calculadora y generadora de fichas, se busca implementar más herramientas con el paso del tiempo, siendo dictadas por la necesidad de las mismas. Cualquier bug o error, por favor reportarlo a la administración (Osea Isaac).</p>
+            <p class="text-center pTextoTituloIndex">Por favor, elige una de herramientas.</p>
+            <div class="boxHerramientaBack">
+                <div class="indexButtonHerramienta buttonGolpes" id="golpes" href="">
+                    Golpes (Taijutsu)
+                </div>
+                <div class="indexButtonHerramienta buttonChakra" id="chakra" href="">
+                    Técnicas (Ninjutsu, etc)
+                </div>
+                <div class="indexButtonHerramienta buttonResistenciaTotal" id="resistenciaChakra" href="">
+                    Resistencia de Chakra
+                </div>
+                <a href="./charts.html" class="indexButtonHerramienta respaldarFichaButton" id="respaldarFichaButton">Fichas (WIP - No tocar)</a>
+            </div>
         </div>
-        <div class="buttonChakra" id="chakra" href="">
-            Técnicas (Ninjutsu, etc)
-        </div>
-        <div class="buttonResistenciaTotal" id="resistenciaChakra" href="">
-            Resistencia de Chakra
-        </div>
-        <a href="./charts.html" class="respaldarFichaButton" id="respaldarFichaButton">Fichas (WIP - No tocar)</a>
 
 
+        <!-- ? AQUI SE CONTROLA FUERZA -->
 
-
-        <!--  -->
-        <!--  -->
-        <!--  -->
-        <!--  -->
 
         <div class="labelsInputFuerza labelsGeneral" id="labelsInputFuerza">
-            <h3 class="descripcionFuerza descripcionGeneral">Los golpes y/o patadas dados con fuerza son multiplicados x2. El calculo se realiza restando la fuerza del golpe a la fuerza tuya, posteriormente añadiendo la multiplicacion para definir cuanto daño te realizo.</h3>
+            <h3 class="text-center descripcionFuerza descripcionGeneral">Los golpes y/o patadas dados con fuerza son multiplicados x2. El calculo se realiza restando la fuerza del golpe a la fuerza tuya, posteriormente añadiendo la multiplicacion para definir cuanto daño te realizo.</h3>
             <input class="inputFuerza input1" placeholder="Coloca la fuerza del ataque recibido" type="text" id="inputFuerza">
             <input class="inputRecepter input2" placeholder="Coloca la fuerza de tu personaje" type="text" id="inputReceptor">
             <input class="submitFuerza submitGeneral" id="calcularTotalFuerza" type="submit" value="Calcular">
             <input id="buttonRecuperar" title="Reutiliza los datos usados en tu anterior uso de la plataforma." class="buttonRecuperarGeneral" type="button" value="Reusar Datos">
             <div class="boxRadios boxRadiosFuerza">
-                <p>Con la nueva actualización en Shinobi, ahora el cálculo de la fuerza cambia. Si tu porcentaje de maestría de Taijutsu es mayor a 50%, el daño es x1.5 y si tienes más del 90%, el daño será por 1.25. </p>
+                <p class="descripcionFuerzaBoxRadios">Con la nueva actualización en Shinobi, ahora el cálculo de la fuerza cambia. Si tu porcentaje de maestría de Taijutsu es mayor a 50%, el daño es x1.5 y si tienes más del 90%, el daño será por 1.25. </p>
             </div>
             <div class="radiosFuerza">
                 <input class="radioFuerzaNormal" type="radio" name="fuerza" id="radioFuerzaNormal">
@@ -54,19 +60,20 @@
         </div>
 
 
+        <!-- ? AQUI ABAJO SE CONTROLA CHAKRA -->
 
 
         <div class="labelsInputTecnica labelsGeneral" id="labelsInputTecnica">
-            <h3 class="descripcionTecnica descripcionGeneral">Actualmente el daño que se recibe dependerá de cuanto chakra te es golpeado. Ese nivel de poder que te golpea se aumenta un 50% de la base y el resultado final sería lo que te quita.</h3>
+            <h3 class="text-center descripcionTecnica descripcionGeneral">Actualmente el daño que se recibe dependerá de cuanto chakra te es golpeado. Ese nivel de poder que te golpea se aumenta un 50% de la base y el resultado final sería lo que te quita.</h3>
             <input class="inputTecnica input1" type="text" placeholder="Coloca el chakra de la tecnica recibida" id="inputTecnica">
             <input class="inputReceptorTecnica input2" placeholder="Coloca tu chakra restante" type="text" id="inputReceptorTecnica">
             <div class="seccionFinal">
             <input class="submitTecnica submitGeneral" id="calcularTotalTecnica" type="submit" value="Calcular">
             <input id="buttonRecuperarChakra" title="Reutiliza los datos usados en tu anterior uso de la plataforma." class="buttonRecuperarGeneral buttonRecuprarChakra" type="button" value="Reusar Datos">
             <div class="boxRadios boxRadiosChakra">
-                <p>Ten en cuenta las variables de daño. Si alguien te ataca con una técnica con Senjutsu, coloca la cifra del ataque sin el buffo, así la calculadora suma de manera correcta. Ten en cuenta si bloqueas el ataque de igual manera.</p>
+                <p class="descripcionChakraBoxRadios">Ten en cuenta las variables de daño. Si alguien te ataca con una técnica con Senjutsu, coloca la cifra del ataque sin el buffo, así la calculadora suma de manera correcta. Ten en cuenta si bloqueas el ataque de igual manera.</p>
             </div>
-            <div class="radiosChakra radiosGeneral">
+            <div class="text-center radiosChakra radiosGeneral">
                 <input class="radioChakraNormal" type="radio" name="Chakra" id="radioChakraNormal">
                 <label for="radioChakraNormal">Normal</label>
                 <input class="radioSenjutsu" type="radio" name="Chakra" id="radioSenjutsu">
@@ -82,10 +89,11 @@
         </div>
 
 
+        <!-- ? AQUI ABAJO SE CONTROLA CHAKRA -->
+
+
         <div class="labelsInputResistenciaChakra labelsGeneral" id="labelsInputResistenciaChakra">
-            <h3 class="descripcionResistenciaChakra descripcionGeneral">Explicado en el sistema de chakra; entre más disminuya tu chakra, más te descompones físicamente. Por eso en el anime se veía que a medida que se agota el chakra, el usuario se nota más cansado. Es bastante lógico que cuando tú “resistencia” se vaya disminuyendo, tu cuerpo comience a debilitarse, sentirse pesado e incluso comiences a sufrir problemas para respirar, dolores fuertes, etc.</h3>
-    
-    
+            <h3 class="text-center descripcionResistenciaChakra descripcionGeneral">Explicado en el sistema de chakra; entre más disminuya tu chakra, más te descompones físicamente. Por eso en el anime se veía que a medida que se agota el chakra, el usuario se nota más cansado. Es bastante lógico que cuando tú “resistencia” se vaya disminuyendo, tu cuerpo comience a debilitarse, sentirse pesado e incluso comiences a sufrir problemas para respirar, dolores fuertes, etc.</h3>
     
                  
             <input class="inputChakraTotal input1" type="text" placeholder="Coloca el chakra total de tu personaje" id="inputChakraTotalResistencia">
@@ -101,27 +109,35 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -130,4 +146,5 @@
 
 </body>
 <script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>

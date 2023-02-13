@@ -6,12 +6,9 @@ btnVolver.onclick = () => {window.location.reload();}
 
 
 function clickGolpes(){
-        document.getElementById('golpes').style.display = 'none';
-        document.getElementById('chakra').style.display = 'none';
-        document.getElementById('respaldarFichaButton').style.display = 'none';
-        document.getElementById('resistenciaChakra').style.display = 'none';
-        document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
+        document.getElementById('JavaBoxIndex').style.display = 'none';
         document.getElementById('labelsInputFuerza').style.display = 'flex';
+        document.getElementById('insideBoxIndex').style.backgroundColor = 'rgba(37, 38, 39,0.8)';
 }
 
 
@@ -60,12 +57,9 @@ let btnVolverTecnica = document.getElementById('volverTecnica');
 btnVolverTecnica.onclick = () => {window.location.reload();}
 
 function clickChakra(){
-        document.getElementById('golpes').style.display = 'none';
-        document.getElementById('chakra').style.display = 'none';
-        document.getElementById('respaldarFichaButton').style.display = 'none';
-        document.getElementById('resistenciaChakra').style.display = 'none';
-        document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
+        document.getElementById('JavaBoxIndex').style.display = 'none';
         document.getElementById('labelsInputTecnica').style.display = 'flex';
+        document.getElementById('insideBoxIndex').style.backgroundColor = 'rgba(37, 38, 39,0.8)';
 }
 
 
@@ -130,12 +124,9 @@ let btnVolverResistenciaChakra = document.getElementById('volverresistenciaChakr
 btnVolverResistenciaChakra.onclick = () => {window.location.reload();}
 
 function clickResistenciaChakra(){
-    document.getElementById('golpes').style.display = 'none';
-    document.getElementById('chakra').style.display = 'none';
-    document.getElementById('respaldarFichaButton').style.display = 'none';
-    document.getElementById('resistenciaChakra').style.display = 'none';
-    document.getElementById('titulo').innerHTML = 'Introduce los datos solicitados';
+    document.getElementById('JavaBoxIndex').style.display = 'none';
     document.getElementById('labelsInputResistenciaChakra').style.display = 'flex';
+    document.getElementById('insideBoxIndex').style.backgroundColor = 'rgba(37, 38, 39,0.8)';
 }
 
 
