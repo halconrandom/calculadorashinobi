@@ -11,35 +11,36 @@ function clickGolpes(){
         document.getElementById('insideBoxIndex').style.backgroundColor = 'rgba(37, 38, 39,0.8)';
 }
 
-
-let btnSubmit = document.getElementById('calcularTotalFuerza');
-btnSubmit.onclick = function(){calculoSubmitFuerza()}
-
-
-
-function calculoSubmitFuerza(){
-    let fuerzaPJ = document.getElementById("inputReceptor").value
-    let fuerzaEnemigo = document.getElementById("inputFuerza").value
+function calcularTotalFuerza() {
+    const fuerzaPJ = parseInt(document.getElementById("inputReceptor").value);
+    const fuerzaEnemigo = parseInt(document.getElementById("inputFuerza").value);
+    const calcularDanio = getCalcularDanio();
+  
+    const totalDañoFuerza = calcularDanio(fuerzaPJ, fuerzaEnemigo);
+    const dañoTotal = Math.max(totalDañoFuerza, 0);
+  
+    document.getElementById('resultadoFuerza').innerHTML = `El daño total a tu personaje tras recibir ${fuerzaEnemigo} KG de fuerza es de: <br> ${dañoTotal} KG de daño total.`;
+  
     localStorage.setItem("repoInputReceptor", fuerzaPJ);
     localStorage.setItem("repoInputFuerzaEnemiga", fuerzaEnemigo);
-    if (document.getElementById("radioFuerzaNormal").checked){
-        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 2);
-        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
-        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
-        return;
-    }else if (document.getElementById("radioFuerza1.5").checked){
-        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 1.5);
-        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
-        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
-        return;
-    }else if (document.getElementById("radioFuerza1.25").checked){
-        let totalDañoFuerza = ((fuerzaEnemigo - fuerzaPJ) * 1.25);
-        if (totalDañoFuerza < 0) totalDañoFuerza = 0;
-        document.getElementById('resultadoFuerza').innerHTML = "El daño total a tu personaje tras recibir "+fuerzaEnemigo+" KG de fuerza es de: <br> " +totalDañoFuerza +" KG de daño total.";
-        return;
+  }
+  
+  function getCalcularDanio() {
+    if (document.getElementById("radioFuerzaNormal").checked) {
+      return (fuerzaPJ, fuerzaEnemigo) => (fuerzaEnemigo - fuerzaPJ) * 2;
+    } else if (document.getElementById("radioFuerza1.5").checked) {
+      return (fuerzaPJ, fuerzaEnemigo) => (fuerzaEnemigo - fuerzaPJ) * 1.5;
+    } else if (document.getElementById("radioFuerza1.25").checked) {
+      return (fuerzaPJ, fuerzaEnemigo) => (fuerzaEnemigo - fuerzaPJ) * 1.25;
+    } else {
+      return () => 0;
     }
+  }
+  
+  const btnSubmit = document.getElementById('calcularTotalFuerza');
+  btnSubmit.addEventListener('click', calcularTotalFuerza);
 
-}
+
 
 document.getElementById('buttonRecuperar').onclick = function (){
     document.getElementById("inputReceptor").value = localStorage.getItem("repoInputReceptor")
@@ -63,50 +64,35 @@ function clickChakra(){
 }
 
 
-let btnSubmitChakra = document.getElementById('calcularTotalTecnica');
-btnSubmitChakra.onclick = function(){calculoSubmitChakra()}
-
-function calculoSubmitChakra(){
-    let chakraPJ = document.getElementById("inputReceptorTecnica").value
-    let chakraTecnicaEnemigo = document.getElementById("inputTecnica").value
+const calcularDañoTecnica = (chakraTecnicaEnemigo) => {
+    if (document.getElementById("radioChakraNormal").checked) {
+      return document.getElementById("radioBloqueo").checked ? chakraTecnicaEnemigo * 0.4 : parseInt(chakraTecnicaEnemigo) * 0.5;
+    } else if (document.getElementById("radioSenjutsu").checked) {
+      let calculo_tecnica = parseInt(chakraTecnicaEnemigo) * 0.5;
+      let totalDañotecnica = parseInt(chakraTecnicaEnemigo) + parseInt(calculo_tecnica);
+      return document.getElementById("radioBloqueo").checked ? totalDañotecnica * 2 * 0.4 : totalDañotecnica * 2;
+    }
+  }
+  
+  const calculoSubmitChakra = () => {
+    let chakraPJ = document.getElementById("inputReceptorTecnica").value;
+    let chakraTecnicaEnemigo = document.getElementById("inputTecnica").value;
     localStorage.setItem("repoInputReceptorTecnica", chakraPJ);
     localStorage.setItem("repoInputTecnicaEnemiga", chakraTecnicaEnemigo);
-    if (document.getElementById("radioChakraNormal").checked){
-        if(document.getElementById("radioBloqueo").checked){
-            let calculo_tecnica = (chakraTecnicaEnemigo * 0.4)
-            let totalDañoChakra = (chakraPJ - calculo_tecnica)
-            if (totalDañoChakra < 0) totalDañoChakra = 0
-            document.getElementById('resultadoTecnica').innerHTML = "El total de daño de la tecnica del rival es de " + calculo_tecnica + " U/C. \nTu chakra restante es de "+ totalDañoChakra + "U/C";
-            return;
-        }else{
-            let calculo_tecnica = (chakraTecnicaEnemigo * 0.5)
-            let totalDañotecnica = (parseInt(chakraTecnicaEnemigo) + parseInt(calculo_tecnica))
-            let totalDañoChakra = (chakraPJ - totalDañotecnica)
-            if (totalDañoChakra < 0) totalDañoChakra = 0
-            document.getElementById('resultadoTecnica').innerHTML = "El total de daño de la tecnica del rival es de " + totalDañotecnica + " U/C. \nTu chakra restante es de "+ totalDañoChakra + "U/C";
-            return;
-        } 
-    }else if (document.getElementById("radioSenjutsu").checked){
-        if(document.getElementById("radioBloqueo").checked){
-            let calculo_tecnica = (chakraTecnicaEnemigo * 0.5)
-            let totalDañotecnica = (parseInt(chakraTecnicaEnemigo) + parseInt(calculo_tecnica))
-            let calculo_senjutsu = (totalDañotecnica * 2)
-            let calculo_total_senjutsu = (calculo_senjutsu * 0.4)
-            let totalDañoChakra = (chakraPJ - calculo_total_senjutsu)
-            if (totalDañoChakra < 0) totalDañoChakra = 0
-            document.getElementById('resultadoTecnica').innerHTML = "El total de daño de la tecnica del rival es de " + calculo_total_senjutsu + " U/S. \nTu chakra restante es de "+ totalDañoChakra + "U/C";
-            return;
-        }else{
-            let calculo_tecnica = (chakraTecnicaEnemigo * 0.5)
-            let totalDañotecnica = (parseInt(chakraTecnicaEnemigo) + parseInt(calculo_tecnica))
-            let calculo_senjutsu = (totalDañotecnica * 2)
-            let totalDañoChakra = (chakraPJ - calculo_senjutsu)
-            if (totalDañoChakra < 0) totalDañoChakra = 0
-            document.getElementById('resultadoTecnica').innerHTML = "El total de daño de la tecnica del rival es de " + calculo_senjutsu + " U/S. \nTu chakra restante es de "+ totalDañoChakra + "U/C";
-            return;
-        } 
-    }
-}
+    
+    let calculo_tecnica = calcularDañoTecnica(chakraTecnicaEnemigo);
+    let totalDañotecnica = parseInt(chakraTecnicaEnemigo) + parseInt(calculo_tecnica);
+    let totalDañoChakra = parseInt(chakraPJ) - parseInt(totalDañotecnica);
+    if (totalDañoChakra < 0) totalDañoChakra = 0;
+    
+    let totalDañoTexto = document.getElementById("radioSenjutsu").checked ? "U/S" : "U/C";
+    let textoResultado = `El total de daño de la técnica del rival es de ${totalDañotecnica} ${totalDañoTexto}. Tu chakra restante es de ${totalDañoChakra} ${totalDañoTexto}`;
+    document.getElementById('resultadoTecnica').innerHTML = textoResultado;
+  }
+  
+  let btnSubmitChakra = document.getElementById('calcularTotalTecnica');
+  btnSubmitChakra.addEventListener("click", calculoSubmitChakra);
+  
 
 document.getElementById('buttonRecuperarChakra').onclick = function (){
     document.getElementById("inputReceptorTecnica").value = localStorage.getItem("repoInputReceptorTecnica")
@@ -156,9 +142,3 @@ if(chakraPJRestanteResistencia <= 0){
     document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje aún tiene bastante chakra por lo que no tiene problemas de ningun tipo para continuar.';
 }
 }
-
-// 
-// 
-// De aquí para abajo es para trabajar cosas simples del boton Ficha, para más info revisar el chart.js 
-// 
-// 
