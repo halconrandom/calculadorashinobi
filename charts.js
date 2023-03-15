@@ -299,14 +299,16 @@ parseFloat(destreza),
 const capturarImagenBtn = document.getElementById("capturarImagen");
 const miDiv = document.getElementById("fondoFichaTotal");
 
-miDiv.style.height = "800px";
-miDiv.style.width = "600px";
+let scale = window.devicePixelRatio;
+let width = miDiv.offsetWidth;
+let height = miDiv.offsetHeight;
 
 capturarImagenBtn.addEventListener("click", () => {
     html2canvas(miDiv,  {
             scale:4,
-            height: 800,
-            width: 600
+            scale: scale,
+            width: width,
+            height: height,
     }).then(canvas => {
         // Crear una URL para la imagen
         let imageUrl = canvas.toDataURL();
