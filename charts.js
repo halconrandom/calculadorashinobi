@@ -309,6 +309,7 @@ capturarImagenBtn.addEventListener("click", () => {
             scale: scale,
             width: width,
             height: height,
+            y: 1000,
     }).then(canvas => {
         // Crear una URL para la imagen
         let imageUrl = canvas.toDataURL();

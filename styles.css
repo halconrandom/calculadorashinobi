@@ -1027,3 +1027,24 @@ background-color:coral;
     color: white;
     text-shadow: black -2px 0px, black 0px 2px, black 2px 0px, black 0px -2px;
 }
+
+
+.catbutton{
+
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+}
+
+#catimage{
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    /* background-color: white; */
+    width: 300px;
+    height: 300px;
+}

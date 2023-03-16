@@ -142,3 +142,17 @@ if(chakraPJRestanteResistencia <= 0){
     document.getElementById('resultadoResistenciaChakra').innerHTML = 'Tu personaje aún tiene bastante chakra por lo que no tiene problemas de ningun tipo para continuar.';
 }
 }
+
+
+const catButton = document.getElementById('catbutton');
+const catImage = document.getElementById('catimage');
+
+catButton.addEventListener('click', () => {
+  fetch('https://api.thecatapi.com/v1/images/search')
+    .then(response => response.json())
+    .then(data => {
+      const catUrl = data[0].url;
+      catImage.src = catUrl;
+    })
+    .catch(error => console.error(error));
+});
