@@ -126,15 +126,15 @@ function aldeaIcono(){
 
 
 function obtencionImagenesPersonajes(){
-var imgFicha = document.getElementById("imgFichaInput").files[0];
-var imgFichaCompa1 = document.getElementById("imgFichaCompa1Input").files[0];
-var imgFichaCompa2 = document.getElementById("imgFichaCompa2Input").files[0];
-var imgFichaCompa3 = document.getElementById("imgFichaCompa3Input").files[0];
+const imgFicha = document.getElementById("imgFichaInput").files[0];
+const imgFichaCompa1 = document.getElementById("imgFichaCompa1Input").files[0];
+const imgFichaCompa2 = document.getElementById("imgFichaCompa2Input").files[0];
+const imgFichaCompa3 = document.getElementById("imgFichaCompa3Input").files[0];
 
-var readerFicha = new FileReader();
-var readerFichaCompa1 = new FileReader();
-var readerFichaCompa2 = new FileReader();
-var readerFichaCompa3 = new FileReader();
+const readerFicha = new FileReader();
+const readerFichaCompa1 = new FileReader();
+const readerFichaCompa2 = new FileReader();
+const readerFichaCompa3 = new FileReader();
 
 readerFicha.onloadend = function(){
     localStorage.setItem("imgFicha", readerFicha.result);
